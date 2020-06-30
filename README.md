@@ -22,6 +22,11 @@ You can insert the script tag in your HTML:
 ---
 # How to use
 
+after [install](#installation) you can create a HTML node/nodelist using this tool like this:
+call the createElement method (and don't forget it receives an object with some properties) and then add to the DOM.
+you can set in the method these parameters:
+
+
 |  Attribute 	| Type                                	| Default value 	| Description                                                                                                                                                                                                                                             	|
 |:----------:	|-------------------------------------	|---------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 |    type    	| string                              	| div           	| The HTMLElement to be created.                                                                                                                                                                                                                          	|
@@ -31,9 +36,6 @@ You can insert the script tag in your HTML:
 |  listeners 	| { [key:string]: function reference} 	| {}            	| Receive an object where the key is the element eventListener caller (like 'click') and the value is a reference to an method.<br>E.g. listeners: {click: someFunction}                                                                                  	|
 |  children  	| Array<HTMLElement>                  	| []            	| Receive a HTMLElement array, and you can use this feature to create a stack of elements.<br>E.g. createElement({type: 'div', children: [<br>createElement({type: 'h1', html: 'Hello world'}),createElement({type: 'h2', html: 'Nova is here!'}),<br>]}) 	|
 
-after [install](#installation) you can create a HTML node/nodelist using this tool like this:
-call the createElement method (and don't forget it receives an object with some properties) and then add to the DOM.
-you can set in the method these parameters
 
 
 ## Creating a simple element
