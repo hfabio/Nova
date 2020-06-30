@@ -12,11 +12,11 @@ You can insert the script tag in your HTML:
 
 ## Dev environment
 ```html
-  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/hfabio/Nova/master/Nova.dev.js"></script>
 ```
 ## Production environment
 ```html
-  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/hfabio/Nova/master/Nova.min.js"></script>
 ```
 
 ---
