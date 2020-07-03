@@ -14,13 +14,14 @@
  * createElement({type:'img', classes: 'img-large img-borded', html: '', attributes: [{src: './img/profile.png'}, {title: "image's title"}], listeners: [{click: "showModal()"}]});
  */
 var createElement = function (_a) {
-    var _b = _a.type, type = _b === void 0 ? 'div' : _b, _c = _a.classes, classes = _c === void 0 ? '' : _c, _d = _a.html, html = _d === void 0 ? '' : _d, _e = _a.attributes, attributes = _e === void 0 ? {} : _e, _f = _a.listeners, listeners = _f === void 0 ? {} : _f, _g = _a.children, children = _g === void 0 ? [] : _g;
-    return new __Nova(type, classes, html, attributes, listeners, children).getElement();
+    var _b = _a.type, type = _b === void 0 ? 'div' : _b, _c = _a.classes, classes = _c === void 0 ? '' : _c, _d = _a.style, style = _d === void 0 ? {} : _d, _e = _a.html, html = _e === void 0 ? '' : _e, _f = _a.attributes, attributes = _f === void 0 ? {} : _f, _g = _a.listeners, listeners = _g === void 0 ? {} : _g, _h = _a.children, children = _h === void 0 ? [] : _h;
+    return new __Nova(type, classes, style, html, attributes, listeners, children).getElement();
 };
 var __Nova = /** @class */ (function () {
-    function __Nova(type, classes, html, attributes, listeners, children) {
+    function __Nova(type, classes, style, html, attributes, listeners, children) {
         this.type = 'div';
         this.classes = '';
+        this.style = {};
         this.html = '';
         this.attributes = {};
         this.listeners = {};
@@ -33,6 +34,8 @@ var __Nova = /** @class */ (function () {
         else if (classes.length > 0) {
             this.classes = classes;
         }
+        if (Object.keys(style).length > 0)
+            this.style = style;
         if (html.length > 0)
             this.html = html;
         if (Object.keys(attributes).length > 0)
@@ -52,6 +55,9 @@ var __Nova = /** @class */ (function () {
             else {
                 element.className = this.classes;
             }
+        }
+        for (var key in this.style) {
+            element.style[key] = this.style[key];
         }
         if (this.html.length > 0) {
             element.innerHTML = this.html;
