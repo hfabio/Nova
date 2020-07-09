@@ -11,12 +11,16 @@ Every createElement call is a element creation stack, then you can set a huge am
 You can insert the script tag in your HTML:
 
 ## Dev environment
+
+Download the script from `https://raw.githubusercontent.com/hfabio/Nova/master/Nova.dev.js` and insert in your HTML using:
 ```html
-  <script type="text/javascript" src="https://raw.githubusercontent.com/hfabio/Nova/master/Nova.dev.js"></script>
+  <script type="text/javascript" src="Nova.dev.js"></script>
 ```
 ## Production environment
+
+Download the script from `https://raw.githubusercontent.com/hfabio/Nova/master/Nova.min.js` and insert in your HTML using:
 ```html
-  <script type="text/javascript" src="https://raw.githubusercontent.com/hfabio/Nova/master/Nova.min.js"></script>
+  <script type="text/javascript" src="Nova.min.js"></script>
 ```
 
 ---
